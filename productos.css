@@ -1,0 +1,273 @@
+
+/* === HEADER REFINADO CON ESTILO Y ESPACIADO === */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #7c3aed;
+  --accent-500: #8b5cf6;
+  --accent-700: #6d28d9;
+  --border: #e5e7eb;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.topnav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.topnav .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 💡 separa left - center - right */
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.topnav .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topnav .brand {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: var(--accent);
+}
+
+.topnav .links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.topnav .links a {
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.topnav .links a:hover,
+.topnav .links a.active {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent);
+}
+
+.topnav .search {
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 40px;
+}
+
+.topnav .search input[type="search"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.topnav .search input[type="search"]:focus {
+  border-color: var(--accent);
+}
+
+.topnav .search input::placeholder {
+  color: var(--muted);
+}
+
+.topnav .search button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.topnav .search button:hover {
+  background: var(--accent-700);
+  transform: translateY(-1px);
+}
+
+.topnav .icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.icon-btn:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.icon-btn img {
+  display: block;
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+}
+
+/* Tipografía base */
+body {
+  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .titulo {
+  font-family: "Merriweather", "Poppins", serif;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.cont-pagina{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+.categorias{
+    display: flex;
+
+    flex-direction: column;
+    background-color: rgb(250, 248, 248);
+}
+.nav-cat{
+    
+}
+ul{
+    list-style-type: none;
+}
+.medio{
+    margin-top: 2%;
+}
+.filtros{
+    background-color: rgb(250, 248, 248);
+    height: 300px;
+    width: 200px;
+}
+.barra{
+  -webkit-appearance: none; 
+  width: 70px;
+  height: 6px;
+  background: black; 
+  border-radius: 5px;
+  outline: none;
+}
+.barra::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.estrella{
+    height: 18px;
+}
+.checkboxs{
+  display: flex;
+}
+.checkboxs ul{
+  padding: 0;
+  margin: 0;
+}
+.productos{
+  column-count: 2;      
+  column-gap: 20px;     
+  margin-left: 10%;
+  margin-top: 7%;
+}
+.productos section{
+  margin-bottom: 20px;  
+}
+.productos p{
+  margin-bottom: 0;
+}
+.imagen{
+    height:158px;
+}
+.parteBaja{
+    display: flex;
+    margin: 0;
+    gap: 3%;
+}
+.precio{
+    color: var(--accent-600);
+    margin-top: 2%;
+}
+.Valoraciones{
+    display: flex;
+    align-items: center;    
+    gap: 3%;
+}
+.valoracion{
+    height: 15px;
+}
+a{
+  text-decoration: none;
+}
+.grid{display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap:20px}
+.card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  background:#fff;
+  display:flex; flex-direction:column; gap:8px;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.card:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(15,23,42,.08)}
+.card .price, .precios, .precio{color:var(--accent-600); font-weight:700}
+.banner, .ban{border-radius:14px}
+.cont-pagina{max-width:1180px; margin:0 auto; padding:0 16px; gap:28px}
+.imagen{display:block; width:100%; height:auto; max-width:220px; aspect-ratio:1/1; object-fit:contain; margin:auto}
+.precio{color:var(--accent); font-weight:700}
+footer{
+    background-color: black;
+    color: white;
+    margin: 0%;
+    margin-top: 40px;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+.foot-sect{
+    margin: 0%;
+    max-width: 200px;
+}

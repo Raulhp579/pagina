@@ -1,0 +1,380 @@
+/* === HEADER REFINADO CON ESTILO Y ESPACIADO === */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #7c3aed;
+  --accent-500: #8b5cf6;
+  --accent-700: #6d28d9;
+  --border: #e5e7eb;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.topnav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.topnav .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 💡 separa left - center - right */
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.topnav .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topnav .brand {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: var(--accent);
+}
+
+.topnav .links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.topnav .links a {
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.topnav .links a:hover,
+.topnav .links a.active {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent);
+}
+
+.topnav .search {
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 40px;
+}
+
+.topnav .search input[type="search"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.topnav .search input[type="search"]:focus {
+  border-color: var(--accent);
+}
+
+.topnav .search input::placeholder {
+  color: var(--muted);
+}
+
+.topnav .search button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.topnav .search button:hover {
+  background: var(--accent-700);
+  transform: translateY(-1px);
+}
+
+.topnav .icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.icon-btn:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.icon-btn img {
+  display: block;
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+}
+
+/* Tipografía base */
+body {
+  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .titulo {
+  font-family: "Merriweather", "Poppins", serif;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+
+/* === ESTRUCTURA GENERAL === */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #7c3aed;
+  --accent-500: #8b5cf6;
+  --accent-700: #6d28d9;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+
+/* === TITULOS Y BANNER === */
+.titulos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* Contenedor del banner principal (imagen) */
+.banner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 20px auto 28px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen del banner */
+.ban {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  max-height: 340px;
+  object-fit: cover; /* evita deformación */
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+}
+
+/* Responsivo: proporción más alta en móvil */
+@media (max-width: 680px) {
+  .ban { aspect-ratio: 16 / 9; max-height: 260px; }
+}
+
+/* ====== Letrero "Productos en oferta" (REDISEÑADO) ====== */
+.letrero {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.letrero a {
+  display: block;
+  width: 100%;
+}
+
+.letrero h1 {
+  margin: 0;
+  text-align: center;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  font-family: "Merriweather", "Poppins", serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.2;
+  color: transparent;                         /* texto degradado */
+  background-image: linear-gradient(90deg, var(--accent), var(--accent-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: transform .15s ease, box-shadow .15s ease;
+  position: relative;
+}
+
+.letrero h1::after {                          /* subrayado decorativo */
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 10px auto 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-500));
+  border-radius: 999px;
+  opacity: .9;
+}
+
+.letrero a:hover h1 {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+/* === PRODUCTOS EN GRID CENTRADOS === */
+.contenedor-productos {
+  margin-top: 3%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+/* Grid centrado */
+.contenedor-productos.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  justify-items: center; /* centra horizontalmente cada item */
+  align-items: start;    /* alinea por arriba */
+}
+
+/* Cada enlace a producto */
+.contenedor-productos.grid > a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tarjetas de producto */
+.contenedor-productos.grid > a > section {
+  width: 100%;
+  max-width: 260px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.contenedor-productos.grid > a > section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+/* Imagen del producto */
+.productos {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 8px;
+}
+
+/* Nombre y precio */
+h3 { margin: 8px 0 0 0; font-weight: 600; font-size: 1.1rem; }
+
+.precios {
+  color: var(--accent-600);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Estrellas y valoración */
+.estrellas {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.estrella { height: 20px; }
+
+.estrellas p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Suavizar el grid */
+.grid { gap: 20px; place-items: center; }
+
+/* === OPCIONAL: HOVER EN IMÁGENES === */
+.productos:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+/* === OPCIONAL: EFECTO SUAVE EN LA ENTRADA === */
+section { 
+    transition: all 0.25s ease;
+ }
+
+footer{
+    background-color: black;
+    color: white;
+    margin: 0%;
+    margin-top: 40px;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+.foot-sect{
+    margin: 0%;
+    max-width: 200px;
+}
