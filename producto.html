@@ -1,285 +1,292 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Exclusive · Detalle</title>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Document</title>
-    <link href="producto.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Merriweather:wght@700&amp;family=Poppins:wght@300;400;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-     <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png" />
-  </head>
-  <body>
-    <header>
-      <nav class="topnav">
-        <div class="container inner">
-          <div class="left">
-            <div class="brand">Exclusive</div>
-            <div class="links">
-              <a href="index.html">Inicio</a>
-              <a href="productos.html">Tienda</a>
-              <a href="producto.html">Detalle</a>
-            </div>
-          </div>
-          <form action="productos.html" class="search">
-            <input name="q" placeholder="Buscar productos…" type="search" />
-            <button type="submit">Buscar</button>
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Bootstrap 5 por CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png" />
+  <link href="producto.css" rel="stylesheet" />
+  <link rel="stylesheet" href="producto.css">
+</head>
+
+<body class="bg-light text-dark">
+  <!-- HEADER -->
+  <header class="border-bottom bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container py-2">
+        <a class="navbar-brand fw-bold" style="color:var(--accent)" href="index.html">Exclusive</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="mainNav" class="collapse navbar-collapse justify-content-between">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html">Tienda</a></li>
+          </ul>
+
+          <form class="d-flex me-3" action="productos.html">
+            <input class="form-control me-2 rounded-pill" type="search" name="q" placeholder="Buscar productos…">
+            <button class="btn btn-primary rounded-pill px-3" type="submit">Buscar</button>
           </form>
-          <div class="icons">
-            <button class="icon-btn" title="Carrito">
-              <img alt="Carrito" src="assets/carrito.png" />
+
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-outline-secondary rounded-circle p-2 icon-btn" title="Carrito">
+              <img src="assets/carrito.png" alt="Carrito" />
             </button>
-            <button class="icon-btn" title="Cuenta">
-              <img alt="Cuenta" src="assets/person.png" />
+            <button class="btn btn-outline-secondary rounded-circle p-2 icon-btn" title="Cuenta">
+              <img src="assets/person.png" alt="Cuenta" />
             </button>
           </div>
         </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="py-4">
+    <div class="container">
+      <!-- Migas -->
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="productos.html">Categorías</a></li>
+          <li class="breadcrumb-item"><a href="productos.html">Monitores</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Samsung Odyssey G6</li>
+        </ol>
       </nav>
-    </header>
-    <main>
-      <p class="cat">
-        categorias/ Monitores/<strong> Samsung Odyssey G6</strong>
-      </p>
-      <div class="contenedor">
-        <section class="posturas">
-          <img class="producto" src="assets/producto1.png" />
-          <img class="producto" src="assets/producto2.png" />
-          <img class="producto" src="assets/producto3.png" />
-          <img class="producto" src="assets/producto4.png" />
-        </section>
-        <section>
-          <img class="Bimagen" src="assets/producto5.png" />
-        </section>
-        <div class="datos">
-          <h3 class="tituloP">
-            Monitor PC Gaming 68,58 cm (27") Samsung Odyssey G6 OLED
-          </h3>
-          <p class="price">129,00 €</p>
-          <div class="valoracion">
-            <img class="estrella" src="assets/star.png" />
-            <img class="estrella" src="assets/star.png" />
-            <img class="estrella" src="assets/star.png" />
-            <img class="estrella" src="assets/star.png" />
-            <img class="estrella" src="assets/star.png" />
-            <p class="num">(150)</p>
-            <p class="estado">In Stock</p>
+
+      <div class="row g-4">
+        <!-- Thumbs -->
+        <aside class="col-12 col-md-2">
+          <div class="d-flex d-md-block gap-2">
+            <img class="thumb" src="assets/producto1.png" alt="Vista 1" data-target="assets/producto1.png">
+            <img class="thumb" src="assets/producto2.png" alt="Vista 2" data-target="assets/producto2.png">
+            <img class="thumb" src="assets/producto3.png" alt="Vista 3" data-target="assets/producto3.png">
+            <img class="thumb" src="assets/producto4.png" alt="Vista 4" data-target="assets/producto4.png">
           </div>
-          <p>
-            Monitor de tipo OLED con resolución QHD, que ofrece imágenes nítidas
-            y detalladas. Presenta una velocidad de actualización de 240 Hz.
+        </aside>
+
+        <!-- Imagen principal -->
+        <section class="col-12 col-md-5 text-center">
+          <img id="mainImage" class="main-img rounded-4 shadow-sm" src="assets/producto5.png" alt="Samsung Odyssey G6 OLED 27">
+        </section>
+
+        <!-- Datos -->
+        <section class="col-12 col-md-5">
+          <h1 class="h3 fw-bold mb-2">Monitor PC Gaming 68,58 cm (27") Samsung Odyssey G6 OLED</h1>
+          <div class="d-flex align-items-center gap-2 mb-2 rating">
+            <img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt="">
+            <span class="text-muted small">(150)</span>
+            <span class="ms-2 small stock">In Stock</span>
+          </div>
+          <div class="price mb-3">129,00 €</div>
+
+          <p class="text-secondary">
+            Monitor OLED QHD (2560×1440) 240 Hz y 0,03 ms. FreeSync Premium Pro, HDR10+, 250 nits y contraste 1.000.000:1.
+            Modos Gaming Eye Saver y Flicker Free. Ajuste de altura e inclinación, PiP y Virtual AIM Point.
           </p>
-          <div class="botones">
-            <div class="input-number">
-              <button class="btn-minus">−</button>
-              <span id="value">2</span>
-              <button class="btn-plus">+</button>
+
+          <div class="d-flex align-items-center gap-3 my-3">
+            <div class="input-group qty-wrap">
+              <button class="btn btn-primary" id="btnMinus" type="button">−</button>
+              <input type="number" min="1" value="1" class="form-control text-center" id="qty">
+              <button class="btn btn-primary" id="btnPlus" type="button">+</button>
             </div>
-            <button class="comprar">Comprar</button>
-            <button class="favorito">
-              <img class="corazon" src="assets/favorito.png" />
+
+            <button class="btn btn-buy px-4" type="button">Comprar</button>
+            <button class="btn fav-btn rounded-circle p-2" type="button" title="Añadir a favoritos">
+              <img src="assets/favorito.png" alt="Favorito" style="width:22px;height:22px">
             </button>
           </div>
-        </div>
-      </div>
-      <div class="descripcion">
-        <h2 class="caracteristicas">Características</h2>
-        <p class="textoD">
-          Monitor de tipo OLED con resolución QHD, que ofrece imágenes nítidas y
-          detalladas. Presenta una velocidad de actualización de 240 Hz y un
-          tiempo de respuesta de 0,03 ms, lo que permite una experiencia de
-          juego fluida. Incorpora tecnología AMD FreeSync Premium Pro para
-          eliminar el desgarro y los retrasos en la pantalla. Brillo de 250
-          cd/m² y contraste de 1,000,000:1, además de soporte para HDR10+.
-          Incluye modos como Gaming Eye Saver y Flicker Free, así como opciones
-          de personalización como Picture-In-Picture y Virtual AIM Point.
-          Permite ajustes en altura e inclinación.
-        </p>
-        <div class="modeloD">
-          <p>Modelo: LS27DG610SUXEN</p>
-          <p>Referencia: 001015216122760</p>
-          <p>EAN: 8806095810676</p>
-          <p>Clasificación energética</p>
-          <p>G</p>
-        </div>
-        <div class="especificaciones">
-          <div>
-            <p><strong>Pantalla</strong></p>
-            <ul>
-              <li>Tipo de pantalla</li>
-              <li>OLED</li>
-              <li>Tamaño de la pantalla</li>
-              <li>27 "</li>
-              <li>Alta definición</li>
-              <li>QHD</li>
-              <li>Resolución</li>
-              <li>2560 x 1440 píxeles</li>
-              <li>Formato de pantalla</li>
-              <li>16:9</li>
-              <li>Diagonal de la pantalla</li>
-              <li>68,58 cm</li>
-              <li>Hertzios</li>
-              <li>240 Hz</li>
-              <li>Tiempo de respuesta</li>
-              <li>0,03 ms</li>
-            </ul>
-          </div>
-          <div class="Parte2">
-            <p><strong>Sintonizador</strong></p>
-            <ul>
-              <li>Tipo de sintonizador</li>
-              <li>No</li>
-            </ul>
-            <p><strong>Imagen (teletexto)</strong></p>
-            <ul>
-              <li>Nº VESA</li>
-            </ul>
-            <p><strong>Conexiones</strong></p>
-            <ul>
-              <li>2 HDMI 2,1</li>
-              <li>1 DisplayPort 1,4</li>
-              <li>1 Salida de auriculares</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <h1 class="Tfinal">Te puede interesar</h1>
-      <div class="productos">
-        <section>
-          <img class="imgFinal" src="assets/mando.png" />
-          <h5 class="titF">Mando HAVIT HV-G92</h5>
-          <p class="precio">120€</p>
-          <div class="estrellasF">
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <p>(88)</p>
-          </div>
-        </section>
-        <section>
-          <img class="imgFinal" src="assets/teclado.png" />
-          <h5 class="titF">Teclado AK-900 Wired</h5>
-          <p class="precio">960€</p>
-          <div class="estrellasF">
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <p>(75)</p>
-          </div>
-        </section>
-        <section>
-          <img class="imgFinal" src="assets/monitorHome.png" />
-          <h5 class="titF">Monitor Gaming IPS LCD</h5>
-          <p class="precio">370€</p>
-          <div class="estrellasF">
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <p>(99)</p>
-          </div>
-        </section>
-        <section>
-          <img class="imgFinal" src="assets/liquida.png" />
-          <h5 class="titF">Refrigeración liquida RGB</h5>
-          <p class="precio">160€</p>
-          <div class="estrellasF">
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <img class="estrellaF" src="assets/star.png" />
-            <p>(65)</p>
-          </div>
+
+          <ul class="list-unstyled small text-muted">
+            <li>Modelo: <strong>LS27DG610SUXEN</strong></li>
+            <li>Referencia: <strong>001015216122760</strong></li>
+            <li>EAN: <strong>8806095810676</strong></li>
+            <li>Clasificación energética: <strong>G</strong></li>
+          </ul>
         </section>
       </div>
-    </main>
-    <footer>
-      <div class="contenedor-footer">
-        <section class="foot-sect">
-          <h3>Exclusive</h3>
-          <h4>Subscribe</h4>
+
+      <!-- Descripción / Especificaciones -->
+      <section class="desc-block p-4 p-md-5 mt-5">
+        <ul class="nav nav-tabs" id="descTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="carac-tab" data-bs-toggle="tab" data-bs-target="#carac" type="button" role="tab">Características</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="espec-tab" data-bs-toggle="tab" data-bs-target="#espec" type="button" role="tab">Especificaciones</button>
+          </li>
+        </ul>
+        <div class="tab-content pt-3" id="descTabsContent">
+          <div class="tab-pane fade show active" id="carac" role="tabpanel" aria-labelledby="carac-tab">
+            <p class="mb-0">
+              Monitor de tipo OLED con resolución QHD, que ofrece imágenes nítidas y detalladas. Presenta
+              una velocidad de actualización de 240 Hz y un tiempo de respuesta de 0,03 ms, lo que permite
+              una experiencia de juego fluida. Incorpora FreeSync Premium Pro, brillo de 250 cd/m²,
+              contraste de 1.000.000:1 y soporte HDR10+. Incluye Eye Saver y Flicker Free, PiP y Virtual AIM Point.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="espec" role="tabpanel" aria-labelledby="espec-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="fw-bold mb-1">Pantalla</p>
+                <ul class="mb-4">
+                  <li>Tipo: OLED</li>
+                  <li>Tamaño: 27" (68,58 cm)</li>
+                  <li>Resolución: 2560 × 1440 (QHD)</li>
+                  <li>Formato: 16:9</li>
+                  <li>Frecuencia: 240 Hz</li>
+                  <li>Respuesta: 0,03 ms</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p class="fw-bold mb-1">Conectividad</p>
+                <ul class="mb-4">
+                  <li>2 × HDMI 2.1</li>
+                  <li>1 × DisplayPort 1.4</li>
+                  <li>1 × Salida de auriculares</li>
+                </ul>
+                <p class="fw-bold mb-1">Sintonizador</p>
+                <ul class="mb-0">
+                  <li>No</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recomendados -->
+      <section class="mt-5">
+        <h2 class="h4 fw-bold mb-3" style="border-left:16px solid var(--accent); padding-left:12px;">Te puede interesar</h2>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="card border-0 shadow-sm text-center p-3 h-100 hover-card">
+              <img class="img-fluid mb-2" src="assets/mando.png" alt="Mando">
+              <h6 class="fw-semibold mb-0">Mando HAVIT HV-G92</h6>
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <span class="price">120€</span>
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="card border-0 shadow-sm text-center p-3 h-100 hover-card">
+              <img class="img-fluid mb-2" src="assets/teclado.png" alt="Teclado">
+              <h6 class="fw-semibold mb-0">Teclado AK-900 Wired</h6>
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <span class="price">960€</span>
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="card border-0 shadow-sm text-center p-3 h-100 hover-card">
+              <img class="img-fluid mb-2" src="assets/monitorHome.png" alt="Monitor IPS">
+              <h6 class="fw-semibold mb-0">Monitor Gaming IPS LCD</h6>
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <span class="price">370€</span>
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="card border-0 shadow-sm text-center p-3 h-100 hover-card">
+              <img class="img-fluid mb-2" src="assets/liquida.png" alt="RL RGB">
+              <h6 class="fw-semibold mb-0">Refrigeración líquida RGB</h6>
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <span class="price">160€</span>
+                <div class="d-flex align-items-center gap-1">
+                  <img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt=""><img src="assets/star.png" height="16" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light mt-5 py-5">
+    <div class="container text-center text-md-start">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-md-2">
+          <h5 class="fw-bold">Exclusive</h5>
           <p>Get 10% off your first order</p>
-        </section>
-        <section class="foot-sect">
-          <h3>Support</h3>
-          <h4>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</h4>
-          <p>exclusive@gmail.com</p>
-          <p>+88015-88888-9999</p>
-        </section>
-        <section class="foot-sect">
-          <h3>Account</h3>
-          <h4>My Account</h4>
-          <p>Login / Register</p>
-          <p>Cart</p>
-          <p>Wishlist</p>
-          <p>Shop</p>
-        </section>
-        <section class="foot-sect">
-          <h3>Quick Link</h3>
-          <h4>Privacy Policy</h4>
-          <p>Terms Of Use</p>
-          <p>FAQ</p>
-          <p>Contact</p>
-        </section>
-        <section class="foot-sect">
-          <h3>Download</h3>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold">Support</h5>
+          <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.<br>exclusive@gmail.com<br>+88015-88888-9999</p>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold">Account</h5>
+          <ul class="list-unstyled m-0">
+            <li>Login / Register</li><li>Cart</li><li>Wishlist</li><li>Shop</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold">Quick Link</h5>
+          <ul class="list-unstyled m-0">
+            <li>Privacy Policy</li><li>Terms Of Use</li><li>FAQ</li><li>Contact</li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-center">
+          <h5 class="fw-bold">Download</h5>
           <p>Save $3 with App New User Only</p>
-          <img src="assets/qr.png" />
-        </section>
+          <img src="assets/qr.png" width="100" alt="QR">
+        </div>
       </div>
-      <p>
-        Este trabajo está bajo una
-        <a href="https://creativecommons.org">Intitulado</a> © 1999 by
-        <a href="https://creativecommons.org">Jane Doe</a> is licensed under
-        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a
-        ><img
-          src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
-          alt=""
-          style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
-        /><img
-          src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
-          alt=""
-          style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
-        />
+
+      <hr class="border-secondary my-4">
+      <p class="small text-center">
+        Este trabajo está bajo una <a href="https://creativecommons.org">Licencia CC BY 4.0</a> © 1999 by
+        <a href="https://creativecommons.org">Jane Doe</a>
       </p>
-    </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const minus = document.querySelector(".btn-minus");
-        const plus = document.querySelector(".btn-plus");
-        const qty = document.getElementById("qty");
-        function clamp() {
-          const v = Math.max(1, parseInt(qty.value || "1", 10));
-          qty.value = v;
-        }
-        minus &&
-          minus.addEventListener("click", () => {
-            clamp();
-            qty.value = Math.max(1, parseInt(qty.value, 10) - 1);
-          });
-        plus &&
-          plus.addEventListener("click", () => {
-            clamp();
-            qty.value = parseInt(qty.value, 10) + 1;
-          });
-        qty && qty.addEventListener("input", clamp);
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (bundle con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Galería: click en miniaturas cambia la imagen principal
+    document.querySelectorAll('.thumb').forEach(t => {
+      t.addEventListener('click', () => {
+        const url = t.getAttribute('data-target');
+        const main = document.getElementById('mainImage');
+        if (url && main) main.src = url;
       });
-    </script>
-  </body>
+    });
+
+    // Control de cantidad
+    document.addEventListener("DOMContentLoaded", function () {
+      const minus = document.getElementById("btnMinus");
+      const plus = document.getElementById("btnPlus");
+      const qty = document.getElementById("qty");
+      const clamp = () => qty.value = Math.max(1, parseInt(qty.value || "1", 10));
+
+      minus?.addEventListener("click", () => { clamp(); qty.value = Math.max(1, parseInt(qty.value,10)-1); });
+      plus?.addEventListener("click",  () => { clamp(); qty.value = parseInt(qty.value,10)+1; });
+      qty?.addEventListener("input", clamp);
+    });
+  </script>
+</body>
 </html>
