@@ -1,111 +1,65 @@
+@charset "UTF-8";
 :root {
   --bg: #fff;
   --bg-soft: #f8fafc;
   --text: #0f172a;
   --muted: #64748b;
-  --accent: #7c3aed;
+  --accent: #8a2be2; /* mismo morado que usas en main */
   --accent-500: #8b5cf6;
   --accent-700: #6d28d9;
   --border: #e5e7eb;
 }
+
 body {
-  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto,
-    Helvetica, Arial;
+  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* enlaces generales */
 a {
   text-decoration: none;
   color: inherit;
 }
-/* Header */
+
+/* Iconos del header */
 .icon-btn img {
   width: 22px;
   height: 22px;
   object-fit: contain;
 }
-/* Título degradado opcional */
+
+/* Título degradado como en el resto de páginas */
 .gradient-text {
   background: linear-gradient(90deg, var(--accent), var(--accent-500));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* Galería */
-.thumb {
-  width: 84px;
-  height: 84px;
-  object-fit: contain;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 6px;
-  background: #fff;
-  cursor: pointer;
-  transition: transform 0.15s;
+
+/* Wrapper para centrar la card de login en la pantalla */
+.auth-wrapper {
+  min-height: calc(100vh - 250px); /* resta aprox. header + footer */
+  display: flex;
+  justify-content: center; /* centro horizontal */
+  align-items: center; /* centro vertical */
 }
-.thumb:hover {
-  transform: translateY(-2px);
+
+/* Card de login */
+.auth-card {
+  border-radius: 20px;
+  background: #ffffff;
 }
-.main-img {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  object-fit: contain;
-}
-/* Bloque info */
-.price {
+
+/* Estilo links secundarios (morado) */
+.text-link {
   color: var(--accent);
-  font-weight: 800;
-  font-size: 1.25rem;
-}
-.rating img {
-  height: 18px;
-}
-.stock {
-  color: #86efac;
-  font-weight: 600;
-}
-/* Qty + botones */
-.qty-wrap {
-  width: 150px;
-}
-.btn-primary,
-.btn-buy {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.btn-primary:hover,
-.btn-buy:hover {
-  background: var(--accent-700);
-  border-color: var(--accent-700);
-}
-.fav-btn {
-  border: 1px solid var(--border);
-  background: #fff;
-}
-.fav-btn:hover {
-  background: rgba(124, 58, 237, 0.08);
-}
-/* Descripción */
-.desc-block {
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-}
-/* Cards recomendadas */
-.hover-card {
-  transition: all 0.2s ease;
-}
-.hover-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-/* Footer */
-footer a {
-  color: #86efac !important;
+  text-decoration: none;
 }
 
-:root {
-  --accent: #8a2be2; /* o el tono que quieras */
+.text-link:hover {
+  color: var(--accent-700);
+  text-decoration: underline;
 }
 
+/* Botón primario con tu color de marca */
 .btn-primary {
   background-color: var(--accent) !important;
   border-color: var(--accent) !important;
@@ -116,3 +70,16 @@ footer a {
   background-color: #7020c8 !important;
   border-color: #7020c8 !important;
 }
+
+/* Focus de inputs con color de marca */
+.form-control:focus {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 0 0.1rem rgba(139, 92, 246, 0.35);
+}
+
+/* Footer */
+footer a {
+  color: #86efac !important;
+}
+
+/*# sourceMappingURL=main.css.map */

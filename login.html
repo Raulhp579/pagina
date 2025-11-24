@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Exclusive · Iniciar sesión</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Favicon + estilos propios -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body class="bg-light text-dark">
+  <!-- HEADER (igual que productos / producto) -->
+  <header class="border-bottom bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container py-2">
+        <a class="navbar-brand fw-bold" style="color:var(--accent)" href="index.html">Exclusive</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="mainNav" class="collapse navbar-collapse justify-content-between">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html">Tienda</a></li>
+          </ul>
+
+          <form class="d-flex me-3" action="productos.html">
+            <input class="form-control me-2 rounded-pill" type="search" name="q" placeholder="Buscar productos…">
+            <button class="btn btn-primary rounded-pill px-3" type="submit">Buscar</button>
+          </form>
+
+          <div class="d-flex align-items-center gap-2">
+             <a href="carrito.html"><button
+                class="btn btn-outline-secondary rounded-circle p-2 icon-btn"
+                title="Carrito"
+              >
+                <img src="assets/carrito.png" alt="Carrito" />
+              </button>
+              </a>
+            <a href="login.html" class="btn btn-outline-secondary rounded-circle p-2 icon-btn" title="Cuenta">
+              <img src="assets/person.png" alt="Cuenta" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="py-4">
+    <div class="container auth-wrapper">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-md-8 col-lg-5">
+          <div class="card border-0 shadow-sm auth-card">
+            <div class="card-body p-4 p-md-5">
+              <!-- Migas -->
+              <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb small mb-0">
+                  <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Iniciar sesión</li>
+                </ol>
+              </nav>
+
+              <h1 class="h3 fw-bold mb-2 gradient-text">Inicia sesión</h1>
+              <p class="text-muted small mb-4">
+                Accede a tu cuenta para seguir con tus compras y ver tus pedidos.
+              </p>
+
+              <form id="loginForm" novalidate>
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="tuemail@ejemplo.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Introduce un correo electrónico válido.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label fw-semibold">Contraseña</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="••••••••"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Introduce tu contraseña.
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="remember">
+                    <label class="form-check-label small" for="remember">
+                      Recuérdame
+                    </label>
+                  </div>
+                  <a href="#" class="small text-link">¿Has olvidado la contraseña?</a>
+                </div>
+
+                <div class="d-grid mb-3">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Iniciar sesión
+                  </button>
+                </div>
+
+                <p class="small text-center text-muted mb-0">
+                  ¿No tienes cuenta?
+                  <a href="registro.html" class="text-link">Crear una cuenta</a>
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <p class="small text-center text-muted mt-3">
+            Al iniciar sesión aceptas nuestros
+            <a href="#" class="text-link">Términos de uso</a> y
+            <a href="#" class="text-link">Política de privacidad</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL Bootstrap: login correcto -->
+    <div class="modal fade" id="loginOkModal" tabindex="-1" aria-labelledby="loginOkLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="loginOkLabel">¡Bienvenido de nuevo!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            Has iniciado sesión correctamente en tu cuenta de <strong>Exclusive</strong>.
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir navegando</button>
+            <a href="productos.html" class="btn btn-primary">Ir a la tienda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light mt-5 py-5">
+    <div class="container text-center text-md-start">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-md-2">
+          <h5 class="fw-bold">Exclusive</h5>
+          <p>Get 10% off your first order</p>
+        </div>
+
+        <div class="col-md-3">
+          <h5 class="fw-bold">Support</h5>
+          <p>
+            111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.<br />
+            exclusive@gmail.com<br />+88015-88888-9999
+          </p>
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="fw-bold">Account</h5>
+          <ul class="list-unstyled m-0">
+            <li>Login / Register</li>
+            <li>Cart</li>
+            <li>Wishlist</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="fw-bold">Quick Link</h5>
+          <ul class="list-unstyled m-0">
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5 class="fw-bold">Download</h5>
+          <p>Save $3 with App New User Only</p>
+          <img src="assets/qr.png" width="100" alt="QR" />
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4" />
+      <p class="small text-center">
+        Este trabajo está bajo una
+        <a href="https://creativecommons.org" class="text-decoration-none text-info">Licencia CC BY 4.0</a>
+        © 1999 by
+        <a href="https://creativecommons.org" class="text-decoration-none text-info">Jane Doe</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS para validación sencilla + mostrar modal -->
+  <script>
+    (function () {
+      const form = document.getElementById("loginForm");
+      const modalEl = document.getElementById("loginOkModal");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          return;
+        }
+
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      });
+    })();
+  </script>
+</body>
+</html>

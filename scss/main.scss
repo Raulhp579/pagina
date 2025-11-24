@@ -1,17 +1,17 @@
-@charset "UTF-8";
 :root {
   --bg: #fff;
   --bg-soft: #f8fafc;
   --text: #0f172a;
   --muted: #64748b;
-  --accent: #8a2be2; /* mismo morado que usas en main */
+  --accent: #8a2be2;      /* mismo morado que usas en main */
   --accent-500: #8b5cf6;
   --accent-700: #6d28d9;
   --border: #e5e7eb;
 }
 
 body {
-  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Poppins", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 /* enlaces generales */
@@ -38,8 +38,8 @@ a {
 .auth-wrapper {
   min-height: calc(100vh - 250px); /* resta aprox. header + footer */
   display: flex;
-  justify-content: center; /* centro horizontal */
-  align-items: center; /* centro vertical */
+  justify-content: center;   /* centro horizontal */
+  align-items: center;       /* centro vertical */
 }
 
 /* Card de login */
@@ -81,5 +81,3 @@ a {
 footer a {
   color: #86efac !important;
 }
-
-/*# sourceMappingURL=producto.css.map */
